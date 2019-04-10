@@ -45,7 +45,7 @@
                 <td th:text="${p.people}">韩露</td>
                 <td th:text="${p.phone}">15918230478</td>
                 <td th:text="${p.fax}">15918230478</td>
-                <td th:text="${p.createDate}">2015-11-12</td>
+                <td th:text="${#dates.format(p.createDate,'yyyy-MM-dd')}">2015-11-12</td>
                 <td>
                     <a href="view.html"><img th:src="@{/img/read.png}" src="../img/read.png" alt="查看" title="查看"/></a>
                     <a href="update.html"><img th:src="@{/img/xiugai.png}" src="../img/xiugai.png" alt="修改" title="修改"/></a>
