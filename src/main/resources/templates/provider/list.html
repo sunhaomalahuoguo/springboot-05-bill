@@ -22,12 +22,14 @@
             <strong>你现在所在的位置是:</strong>
             <span>供应商管理页面</span>
         </div>
-        <div class="search">
-            <span>供应商名称：</span>
-            <input type="text" placeholder="请输入供应商的名称"/>
-            <input type="button" value="查询"/>
-            <a href="add.html">添加供应商</a>
-        </div>
+        <form th:action="@{/providers}" th:method="get" id="searchForm">
+            <div class="search">
+                <span>供应商名称：</span>
+                <input type="text" name="providerName" th:value="${providerName}" placeholder="请输入供应商的名称"/>
+                <input onclick="$('#searchForm').submit();" type="button" value="查询"/>
+                <a th:href="@{/provider}" th:method="get" href="add.html">添加供应商</a>
+            </div>
+        </form>
         <!--供应商操作表格-->
         <table class="providerTable" cellpadding="0" cellspacing="0">
             <tr class="firstTr">
@@ -47,9 +49,9 @@
                 <td th:text="${p.fax}">15918230478</td>
                 <td th:text="${#dates.format(p.createDate,'yyyy-MM-dd')}">2015-11-12</td>
                 <td>
-                    <a href="view.html"><img th:src="@{/img/read.png}" src="../img/read.png" alt="查看" title="查看"/></a>
-                    <a href="update.html"><img th:src="@{/img/xiugai.png}" src="../img/xiugai.png" alt="修改" title="修改"/></a>
-					<a href="#" class="delete" ><img th:src="@{/img/schu.png}" src="../img/schu.png" alt="删除" title="删除"/></a>
+                    <a th:href="@{/provider/} + ${p.pid}" href="view.html"><img th:src="@{/img/read.png}" src="../img/read.png" alt="查看" title="查看"/></a>
+                    <a th:href="@{/provider/} + ${p.pid} + '?type=update'" href="update.html"><img th:src="@{/img/xiugai.png}" src="../img/xiugai.png" alt="修改" title="修改"/></a>
+					<a th:attr="del_uri=@{/provider/} + ${p.pid}" href="#" class="delete" ><img th:src="@{/img/schu.png}" src="../img/schu.png" alt="删除" title="删除"/></a>
                 </td>
             </tr>
         </table>
