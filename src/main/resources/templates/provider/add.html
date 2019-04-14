@@ -22,6 +22,11 @@
             <form action="#" id="addForm" th:action="@{/provider}" th:method="post">
                 <!--div的class 为error是验证错误，ok是验证成功-->
                 <div class="">
+                    <label for="providerCode">供应商名称：</label>
+                    <input type="text" name="providerCode" id="providerCode"/>
+                    <span >*请输入供应商编码</span>
+                </div>
+                <div class="">
                     <label for="providerName">供应商名称：</label>
                     <input type="text" name="providerName" id="providerName"/>
                     <span >*请输入供应商名称</span>

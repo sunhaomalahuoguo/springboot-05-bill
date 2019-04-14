@@ -1,4 +1,4 @@
-package com.mengxugu.springboot.component;
+package com.mengxuegu.springboot.component;
 
 import org.springframework.web.servlet.LocaleResolver;
 

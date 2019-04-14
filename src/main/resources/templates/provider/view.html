@@ -19,7 +19,8 @@
             <span>供应商管理页面 >> 信息查看</span>
         </div>
         <div class="providerView">
-            <p><strong>供应商编码：</strong><span th:text="${provider.pid}">PRO-CODE—001</span></p>
+            <p><strong>编号：</strong><span th:text="${provider.pid}">PRO-CODE—001</span></p>
+            <p><strong>供应商编码：</strong><span th:text="${provider.providerCode}">PRO-CODE—001</span></p>
             <p><strong>供应商名称：</strong><span th:text="${provider.providerName}">测试供应商001</span></p>
             <p><strong>联系人：</strong><span th:text="${provider.people}">韩露</span></p>
             <p><strong>联系电话：</strong><span th:text="${provider.phone}">15918230478</span></p>

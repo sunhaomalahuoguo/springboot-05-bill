@@ -1,4 +1,4 @@
-package com.mengxugu.springboot.entities;
+package com.mengxuegu.springboot.entities;
 
 import java.util.Date;
 

@@ -24,6 +24,11 @@
                 <input th:type="hidden" th:name="_method" th:value="put">
                 <input th:type="hidden" th:name="pid" th:value="${provider.pid}">
                 <div class="">
+                    <label for="providerCode">供应商编码：</label>
+                    <input type="text" name="providerCode" th:value="${provider.providerCode}" id="providerCode" placeholder="测试供应商001"/>
+                    <span >*</span>
+                </div>
+                <div class="">
                     <label for="providerName">供应商名称：</label>
                     <input type="text" name="providerName" th:value="${provider.providerName}" id="providerName" placeholder="测试供应商001"/>
                     <span >*</span>

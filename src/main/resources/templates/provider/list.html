@@ -33,6 +33,7 @@
         <!--供应商操作表格-->
         <table class="providerTable" cellpadding="0" cellspacing="0">
             <tr class="firstTr">
+                <th width="10%">编号</th>
                 <th width="10%">供应商编码</th>
                 <th width="20%">供应商名称</th>
                 <th width="10%">联系人</th>
@@ -42,7 +43,8 @@
                 <th width="30%">操作</th>
             </tr>
             <tr th:each="p : ${providers}">
-                <td th:text="${p.pid}">PRO-CODE—001</td>
+                <td th:text="${p.pid}">1</td>
+                <td th:text="${p.providerCode}">PRO-CODE—001</td>
                 <td th:text="${p.providerName}">测试供应商001</td>
                 <td th:text="${p.people}">韩露</td>
                 <td th:text="${p.phone}">15918230478</td>

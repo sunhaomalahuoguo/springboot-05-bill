@@ -1,4 +1,4 @@
-package com.mengxugu.springboot.entities;
+package com.mengxuegu.springboot.entities;
 
 import java.util.Date;
 
@@ -26,8 +26,19 @@ public class Bill {
 
     private Provider provider;
 
+    private Integer pid;
+
     // 是否付款 0 未付款， 1已付款
     private Integer pay;
+
+    public Integer getPid() {
+        return pid;
+    }
+
+    public void setPid(Integer pid) {
+        this.pid = pid;
+    }
+
     // 创建时间
     private Date createDate;
     public Bill() {}
