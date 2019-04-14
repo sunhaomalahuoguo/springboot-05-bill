@@ -12,7 +12,7 @@
     <h1>梦学谷账单管理系统</h1>
 
     <div class="publicHeaderR">
-        <p><span>下午好！</span><span style="color: #fff21b">[[${session.loginUser}]]</span> , 欢迎你！</p>
+        <p><span>下午好！</span><span style="color: #fff21b">[[${session.loginUser.username}]]</span> , 欢迎你！</p>
         <a th:href="@{/logout}" href="../main/login.html">退出</a>
     </div>
 </header>
@@ -29,8 +29,8 @@
             <ul class="list">
                 <li th:id="${activeUri == 'bill' ? 'active' : ''}"><a th:href="@{/bills}" href="../bill/list.html">账单管理</a></li>
                 <li th:id="${activeUri == 'provider' ? 'active' : ''}"><a th:href="@{/providers}" href="../provider/list.html">供应商管理</a></li>
-                <li th:id="${activeUri == 'user' ? 'active' : ''}"><a href="../user/list.html">用户管理</a></li>
-                <li th:id="${activeUri == 'password' ? 'active' : ''}"><a href="../main/password.html">密码修改</a></li>
+                <li th:id="${activeUri == 'user' ? 'active' : ''}"><a th:href="@{/users}" href="../user/list.html">用户管理</a></li>
+                <li th:id="${activeUri == 'password' ? 'active' : ''}"><a th:href="@{/password}" href="../main/password.html">密码修改</a></li>
                 <li><a th:href="@{/logout}" href="../main/login.html">退出系统</a></li>
             </ul>
         </nav>
