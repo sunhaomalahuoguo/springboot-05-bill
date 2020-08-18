@@ -51,6 +51,7 @@ public class BillController {
         map.put("pid",bill.getPid());
         map.put("pay",bill.getPay());
         map.put("billName",bill.getBillName());
+//        aaaaaa
         return "bill/list";
     }
 
